@@ -9,16 +9,13 @@ import com.robillo.broadfab.BroadFab;
 
 public class MainActivity extends AppCompatActivity {
 
+    BroadFab fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BroadFab.fab1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "ROBILLO", Toast.LENGTH_SHORT).show();
-            }
-        });
+        fab = new BroadFab(this);
     }
 }
